@@ -2,9 +2,10 @@
 from enum import Enum
 from typing import Optional
 
+from pydantic import Field
+
 # from sqlmodel import SQLModel
-from pydantic import BaseModel
-from sqlalchemy import Field
+from database.db import Base
 
 
 class GemClarity(Enum):
@@ -61,7 +62,7 @@ class GemType(Enum):
     CRIMSON = "CRIMSON"
 
 
-class Gem(BaseModel):
+class Gem(Base):
     """The model for the gem
 
     Args:
@@ -78,7 +79,7 @@ class Gem(BaseModel):
         default=None, foreign_key="gem_properties.id")
 
 
-class GemProperties(BaseModel):
+class GemProperties(Base):
     """The model for the gem's properties
 
     Args:
