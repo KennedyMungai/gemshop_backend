@@ -43,3 +43,6 @@ def create_gem_db():
     with SessionLocal(engine) as session:
         session.add(gem_p)
         session.commit()
+        g = create_gem(gem_p.id)
+        session.add(g)
+        session.commit()
