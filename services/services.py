@@ -6,6 +6,7 @@ from models.gem_model import Gem, GemProperties
 
 color_grades = ascii_uppercase[3:9]
 
+
 def create_gem_props():
     """A function that fills in the gem properties
 
@@ -16,7 +17,7 @@ def create_gem_props():
     color = color_grades[randint(0, len(color_grades) - 1)]
     clarity = randint(1, 4)
     gemp_p = GemProperties(size=size, clarity=clarity, color=color)
-    
+
     return gemp_p
 
 
