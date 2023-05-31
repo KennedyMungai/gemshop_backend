@@ -70,7 +70,7 @@ class Gem(Base):
     """
     __tablename__ = "gems"
 
-    id: Field(primary_key=True)
+    id: int = Field(primary_key=True)
     price: float
     available: bool = True
     get_type: GemType = GemType.RUBY
@@ -87,7 +87,7 @@ class GemProperties(Base):
     """
     __tablename__ = "gem_properties"
 
-    id: Field(primary_key=True)
+    id: int = Field(primary_key=True)
     size: float = 1
     clarity: Optional[GemClarity] = None
     color: Optional[GemColor] = None
