@@ -8,7 +8,7 @@ from pydantic import Field
 from database.db import Base
 
 
-class GemClarity(Enum):
+class GemClarity(Enum, int):
     """An enum for the gem's clarity"""
     SI = 1
     VS = 2
@@ -16,7 +16,7 @@ class GemClarity(Enum):
     FL = 4
 
 
-class GemColor(Enum):
+class GemColor(Enum, str):
     """The GemColor Enum
 
     Args:
@@ -30,7 +30,7 @@ class GemColor(Enum):
     I = "I"
 
 
-class GemType(Enum):
+class GemType(Enum, str):
     """The enum for the gem types
 
     Args:
