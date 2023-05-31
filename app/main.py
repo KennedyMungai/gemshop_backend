@@ -2,7 +2,8 @@
 from fastapi import FastAPI
 from sqlalchemy import create_engine
 
-engine = create_engine('sqlite:///gemshop.db')
+engine = create_engine('sqlite:///gemshop.db',
+                       connect_args={'check_same_thread': False}, echo=True)
 
 
 app = FastAPI(name='Gemshop Backend',
