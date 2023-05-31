@@ -16,6 +16,11 @@ class GemClarity(Enum):
 
 
 class GemColor(Enum):
+    """The GemColor Enum
+
+    Args:
+        Enum (_type_): Enumerator
+    """
     D = "D"
     E = "E"
     G = "G"
@@ -25,6 +30,11 @@ class GemColor(Enum):
 
 
 class GemType(Enum):
+    """The enum for the gem types
+
+    Args:
+        Enum (_type_): The enum for the gems
+    """
     DIAMOND = "DIAMOND"
     RUBY = "RUBY"
     SAPPHIRE = "SAPPHIRE"
