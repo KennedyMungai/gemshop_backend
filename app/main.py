@@ -1,4 +1,4 @@
-"""The entrypoint to the app""""
+"""The entrypoint to the app"""
 from fastapi import FastAPI
 
 
