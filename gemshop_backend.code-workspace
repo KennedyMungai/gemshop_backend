@@ -6,7 +6,9 @@
 	],
 	"settings": {
 		"cSpell.words": [
+			"autoflush",
 			"Gemshop",
+			"sessionmaker",
 			"sqlmodel"
 		]
 	}
