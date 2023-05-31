@@ -4,6 +4,8 @@ from string import ascii_uppercase
 
 from models.gem_model import Gem, GemProperties
 
+from database.db import SessionLocal, engine
+
 color_grades = ascii_uppercase[3:9]
 
 
@@ -33,3 +35,11 @@ def create_gem(gem_p: int):
     gem = Gem(price=1000, gem_properties_id=gem_p)
 
     return gem
+
+
+def create_gem_db():
+    """A function that creates the gem db"""
+    gem_p = create_gem_props()
+    with SessionLocal(engine) as session:
+        session.add(gem_p)
+        session.commit()
