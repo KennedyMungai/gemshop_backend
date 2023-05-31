@@ -8,5 +8,5 @@ app = FastAPI(name='Gemshop Backend',
 
 @app.get("/", name="Root", description="The root endpoint for the application")
 async def root() -> dict[str, str]:
-  """The root endpoint for the application"""
-  return {"message": "Hello World"}
+    """The root endpoint for the application"""
+    return {"message": "Hello World"}
