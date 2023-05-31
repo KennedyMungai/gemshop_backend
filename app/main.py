@@ -1,5 +1,8 @@
 """The entrypoint to the app"""
 from fastapi import FastAPI
+from sqlalchemy import create_engine
+
+engine = create_engine('sqlite:///gemshop.db')
 
 
 app = FastAPI(name='Gemshop Backend',
